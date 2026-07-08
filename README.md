@@ -132,7 +132,7 @@ If `GEMINI_API_KEY` is also set, a direct call to Gemini 2.5 Flash Lite is tried
 │   └── types/index.ts                # Shared TypeScript interfaces
 └── public/                           # Static assets
 ```
-
+...
 ## License
 
 MIT
