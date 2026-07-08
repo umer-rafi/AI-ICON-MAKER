@@ -2,6 +2,10 @@
 
 Describe an icon in plain English and get matching results across six icon libraries. If nothing matches, generate a brand-new SVG icon with AI on the spot.
 
+![AI Icon Finder screenshot](docs/screenshot.png)
+
+**Live demo:** [ai-icon-finder.vercel.app](https://ai-icon-finder.vercel.app)
+
 ## Architecture
 
 ```
