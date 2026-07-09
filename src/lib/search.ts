@@ -144,7 +144,3 @@ export function searchIcons(
     aiExpandedQuery,
   }
 }
-
-export function getLibraries(): string[] {
-  return [...new Set(icons.map((i) => i.library))]
-}

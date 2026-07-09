@@ -1,4 +1,6 @@
-export type IconLibrary = "lucide" | "feather" | "heroicons" | "fontawesome" | "material" | "tabler"
+export type IconLibrary = "lucide" | "feather" | "heroicons" | "tabler"
+
+export const ICON_LIBRARIES: IconLibrary[] = ["lucide", "feather", "heroicons", "tabler"]
 
 export interface IconEntry {
   id: string

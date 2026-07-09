@@ -1,13 +1,13 @@
 "use client"
 
 import { useState, useCallback, useRef } from "react"
-import type { IconEntry, IconLibrary, GeneratedIcon, DisplayIcon } from "@/types"
+import type { IconEntry, GeneratedIcon, DisplayIcon } from "@/types"
+import { ICON_LIBRARIES } from "@/types"
 import { SearchBar } from "@/components/SearchBar"
 import { IconGrid } from "@/components/IconGrid"
 import { IconPreview } from "@/components/IconPreview"
 import { FilterLibrary } from "@/components/FilterLibrary"
 import { ThemeToggle } from "@/components/ThemeToggle"
-import { getLibraries } from "@/lib/search"
 
 export default function Home() {
   const [icons, setIcons] = useState<IconEntry[]>([])
@@ -25,7 +25,7 @@ export default function Home() {
   const generatingRef = useRef(false)
   const lastGenerateTime = useRef(0)
 
-  const libraries = getLibraries() as IconLibrary[]
+  const libraries = ICON_LIBRARIES
 
   const handleSearch = useCallback(
     async (q: string) => {

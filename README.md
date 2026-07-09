@@ -1,6 +1,6 @@
 # AI Icon Finder
 
-Describe an icon in plain English and get matching results across six icon libraries. If nothing matches, generate a brand-new SVG icon with AI on the spot.
+Describe an icon in plain English and get matching results across four icon libraries. If nothing matches, generate a brand-new SVG icon with AI on the spot.
 
 ![AI Icon Finder screenshot](docs/screenshot.png)
 
@@ -41,7 +41,7 @@ Describe an icon in plain English and get matching results across six icon libra
 
 - **Natural Language Search** — describe an icon ("secure login", "cloud upload") and get ranked matches, not just exact-name lookups
 - **AI Query Expansion** — an LLM expands your query into concrete keywords and icon names before scoring, so vague descriptions still find the right icon
-- **1,386 Icons, 6 Libraries** — Lucide, Feather, Heroicons, Tabler, Font Awesome, and Material, 231 icons each, searchable as one set
+- **8,750 Icons, 4 Libraries** — the full real icon sets of Lucide, Feather, Heroicons, and Tabler, searchable as one set
 - **AI Icon Generation** — when no library icon matches, generate a custom SVG on the spot from your description
 - **Local Fallback Generator** — ~50 hand-written regex-matched SVG templates plus a deterministic color-initial fallback, so generation never comes back empty even if every AI model is down
 - **Library Filtering** — narrow results to a single icon library
