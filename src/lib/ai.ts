@@ -1,4 +1,5 @@
 import type { AIKeywordResult, OpenRouterResponse, GeminiResponse } from "@/types"
+import { sanitizeSvg } from "./sanitize"
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY
@@ -262,11 +263,17 @@ export async function generateIconSVG(
   description: string
 ): Promise<string | null> {
   const parser = (content: string): string | null => {
-    const result = extractSVG(content)
-    if (!result) {
+    const extracted = extractSVG(content)
+    if (!extracted) {
       lastModelError = `Failed to extract SVG: ${content.slice(0, 200)}`
+      return null
     }
-    return result
+    const sanitized = sanitizeSvg(extracted)
+    if (!sanitized) {
+      lastModelError = `Extracted SVG failed sanitization: ${extracted.slice(0, 200)}`
+      return null
+    }
+    return sanitized
   }
   return tryModels(GENERATE_PROMPT, description, parser)
 }
